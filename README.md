@@ -1,4 +1,8 @@
 # Demonstração de Sharding e Replication no MongoDB usando containers.
+
+## Arquitetura
+![Arquitetura](https://miro.medium.com/max/1172/1*PjKoe378CdqLgQm-IHDXgQ.png)
+
 ## Criando os nós ConfigServer:
 docker run --name mongo-config01 --net net-cluster-mongo -d mongo mongod --configsvr --replSet configserver --port 27017
 docker run --name mongo-config02 --net net-cluster-mongo -d mongo mongod --configsvr --replSet configserver --port 27017
